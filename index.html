@@ -8,64 +8,61 @@
 
 <meta name="monetag" content="2ebf9dc52aa63f17020b8ff6d7063103">
 
-<script src="https://5gvci.com/act/files/tag.min.js?z=10673673" data-cfasync="false" async></script>
+<!-- MONETAG ONCLICK ZONE -->
+<script>
+(function(s){
+s.dataset.zone='10673670',
+s.src='https://al5sm.com/tag.min.js'
+})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+</script>
 
 <style>
-body {
-    margin:0;
-    text-align:center;
-    font-family:Arial;
-    background:linear-gradient(135deg,#ff4e50,#f9d423);
-    color:white;
-    overflow-x:hidden;
+body{
+margin:0;
+text-align:center;
+font-family:Arial;
+background:linear-gradient(135deg,#ff4e50,#f9d423);
+color:white;
+overflow-x:hidden;
 }
-
-.container{
-    padding:30px;
-}
-
+.container{padding:30px;}
 h1{
-    font-size:30px;
-    animation: glow 2s infinite alternate;
+font-size:30px;
+animation:glow 2s infinite alternate;
 }
-
 @keyframes glow{
-    from{ text-shadow:0 0 10px white;}
-    to{ text-shadow:0 0 20px yellow;}
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 25px yellow;}
 }
-
 .gif{
-    width:250px;
-    margin:20px auto;
+width:260px;
+margin:20px auto;
+border-radius:12px;
 }
-
 input{
-    padding:10px;
-    width:80%;
-    max-width:300px;
-    border-radius:6px;
-    border:none;
+padding:12px;
+width:80%;
+max-width:300px;
+border-radius:6px;
+border:none;
 }
-
 button{
-    margin-top:15px;
-    padding:10px 20px;
-    border:none;
-    border-radius:6px;
-    font-size:16px;
-    background:white;
-    color:#ff4e50;
-    cursor:pointer;
+margin-top:15px;
+padding:12px 22px;
+border:none;
+border-radius:6px;
+font-size:16px;
+background:white;
+color:#ff4e50;
+cursor:pointer;
 }
-
 .music-btn{
-    margin-top:15px;
-    background:#fff;
-    color:#000;
+background:#fff;
+color:#000;
 }
 .footer{
-    margin-top:30px;
-    font-size:14px;
+margin-top:30px;
+font-size:14px;
 }
 a{color:white;}
 </style>
@@ -74,9 +71,10 @@ a{color:white;}
 <body>
 
 <div class="container">
+
 <h1>🎨 होली की हार्दिक शुभकामनाएं 🎨</h1>
 
-<img class="gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif">
+<img class="gif" src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif">
 
 <p>Vipul की तरफ से होली की हार्दिक शुभकामनाएं</p>
 
@@ -89,6 +87,7 @@ a{color:white;}
 <div class="footer">
 <a href="about.html">हमारे बारे में</a>
 </div>
+
 </div>
 
 <audio id="bgMusic" loop>
@@ -102,7 +101,6 @@ if(name.trim()===""){alert("कृपया अपना नाम लिखे�
 var text=name+" की तरफ से होली की हार्दिक शुभकामनाएं 🎉\n\nदेखें यहाँ: https://v1wish.github.io/";
 window.open("https://wa.me/?text="+encodeURIComponent(text),'_blank');
 }
-
 function playMusic(){
 document.getElementById("bgMusic").play();
 }
