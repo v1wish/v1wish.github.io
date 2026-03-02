@@ -6,12 +6,14 @@
 
 <title>होली की हार्दिक शुभकामनाएं</title>
 
-<!-- Monetag (Propeller) Verification -->
 <meta name="monetag" content="2ebf9dc52aa63f17020b8ff6d7063103">
 
 <meta property="og:title" content="होली की हार्दिक शुभकामनाएं">
 <meta property="og:description" content="इस होली पर अपने प्रियजनों को रंगों भरी शुभकामनाएं भेजें।">
 <meta property="og:type" content="website">
+
+<!-- MONETAG ONCLICK ZONE -->
+<script src="https://5gvci.com/act/files/tag.min.js?z=10673673" data-cfasync="false" async></script>
 
 <style>
 body {
@@ -21,15 +23,12 @@ body {
     background: linear-gradient(135deg,#ff4e50,#f9d423);
     color: white;
 }
-
 .container {
     padding: 40px 20px;
 }
-
 h1 {
     font-size: 32px;
 }
-
 input {
     padding: 10px;
     font-size: 16px;
@@ -38,7 +37,6 @@ input {
     border-radius: 5px;
     border: none;
 }
-
 button {
     margin-top: 15px;
     padding: 10px 20px;
@@ -49,7 +47,6 @@ button {
     color: #ff4e50;
     cursor: pointer;
 }
-
 .footer {
     margin-top: 40px;
     font-size: 14px;
@@ -63,7 +60,7 @@ a { color: white; }
 <div class="container">
     <h1>🎨 होली की हार्दिक शुभकामनाएं 🎨</h1>
 
-    <p id="wishText">
+    <p>
         Vipul की तरफ से होली की हार्दिक शुभकामनाएं
     </p>
 
@@ -75,7 +72,8 @@ a { color: white; }
 
     <div class="footer">
         <p>
-                       <a href="about.html">हमारे बारे में</a>
+            
+            <a href="about.html">हमारे बारे में</a>
         </p>
     </div>
 </div>
@@ -87,10 +85,8 @@ function generateLink() {
         alert("कृपया अपना नाम लिखें");
         return;
     }
-
     var text = name + " की तरफ से होली की हार्दिक शुभकामनाएं 🎉\n\nदेखें यहाँ: https://v1wish.github.io/";
     var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(text);
-
     window.open(whatsappUrl, '_blank');
 }
 </script>
