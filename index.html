@@ -8,14 +8,6 @@
 
 <meta name="monetag" content="2ebf9dc52aa63f17020b8ff6d7063103">
 
-<!-- MONETAG ONCLICK ZONE -->
-<script>
-(function(s){
-s.dataset.zone='10673670',
-s.src='https://al5sm.com/tag.min.js'
-})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
-</script>
-
 <style>
 body{
 margin:0;
@@ -23,7 +15,6 @@ text-align:center;
 font-family:Arial;
 background:linear-gradient(135deg,#ff4e50,#f9d423);
 color:white;
-overflow-x:hidden;
 }
 .container{padding:30px;}
 h1{
@@ -45,6 +36,7 @@ width:80%;
 max-width:300px;
 border-radius:6px;
 border:none;
+font-size:16px;
 }
 button{
 margin-top:15px;
@@ -55,10 +47,6 @@ font-size:16px;
 background:white;
 color:#ff4e50;
 cursor:pointer;
-}
-.music-btn{
-background:#fff;
-color:#000;
 }
 .footer{
 margin-top:30px;
@@ -76,13 +64,13 @@ a{color:white;}
 
 <img class="gif" src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif">
 
-<p>Vipul की तरफ से होली की हार्दिक शुभकामनाएं</p>
+<p id="liveWish">
+आपकी तरफ से होली की हार्दिक शुभकामनाएं
+</p>
 
-<input type="text" id="nameInput" placeholder="अपना नाम यहाँ लिखें"><br>
+<input type="text" id="nameInput" placeholder="अपना नाम यहाँ लिखें" oninput="updateName()"><br>
 
-<button onclick="generateLink()">शेयर करें</button><br>
-
-<button class="music-btn" onclick="playMusic()">🎵 संगीत चलाएं</button>
+<button onclick="shareWish()">शेयर करें</button>
 
 <div class="footer">
 <a href="about.html">हमारे बारे में</a>
@@ -90,20 +78,37 @@ a{color:white;}
 
 </div>
 
-<audio id="bgMusic" loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-function generateLink(){
-var name=document.getElementById("nameInput").value;
-if(name.trim()===""){alert("कृपया अपना नाम लिखें");return;}
+
+function updateName(){
+var name=document.getElementById("nameInput").value.trim();
+if(name===""){
+document.getElementById("liveWish").innerText="आपकी तरफ से होली की हार्दिक शुभकामनाएं";
+}else{
+document.getElementById("liveWish").innerText=name+" की तरफ से होली की हार्दिक शुभकामनाएं";
+}
+}
+
+function shareWish(){
+var name=document.getElementById("nameInput").value.trim();
+if(name===""){
+alert("कृपया अपना नाम लिखें");
+return;
+}
+
+/* LOAD MONETAG ONLY ON SHARE CLICK */
+var s=document.createElement("script");
+s.dataset.zone='10673670';
+s.src='https://al5sm.com/tag.min.js';
+document.body.appendChild(s);
+
 var text=name+" की तरफ से होली की हार्दिक शुभकामनाएं 🎉\n\nदेखें यहाँ: https://v1wish.github.io/";
+setTimeout(function(){
 window.open("https://wa.me/?text="+encodeURIComponent(text),'_blank');
+},500);
+
 }
-function playMusic(){
-document.getElementById("bgMusic").play();
-}
+
 </script>
 
 </body>
