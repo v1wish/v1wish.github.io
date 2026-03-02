@@ -3,55 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>होली की हार्दिक शुभकामनाएं | v1wish</title>
-<meta name="description" content="रंगों के इस पावन त्योहार पर अपने प्रियजनों को होली की शुभकामनाएं भेजें। अपना नाम लिखें और तुरंत शेयर करें।">
-<meta name="google-adsense-account" content="ca-pub-5204243596387032">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5204243596387032"
-crossorigin="anonymous"></script>
+
+<title>होली की हार्दिक शुभकामनाएं</title>
+
+<!-- Monetag (Propeller) Verification -->
+<meta name="monetag" content="2ebf9dc52aa63f17020b8ff6d7063103">
+
+<meta property="og:title" content="होली की हार्दिक शुभकामनाएं">
+<meta property="og:description" content="इस होली पर अपने प्रियजनों को रंगों भरी शुभकामनाएं भेजें।">
+<meta property="og:type" content="website">
+
 <style>
-body{margin:0;font-family:sans-serif;text-align:center;background:linear-gradient(135deg,#ff0080,#ff8c00,#40e0d0);background-size:400% 400%;animation:bg 8s ease infinite;color:white;}
-@keyframes bg{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-.container{padding:25px;}
-h1{font-size:28px;margin-top:20px;}
-.name{font-size:22px;font-weight:bold;margin:15px 0;}
-input{padding:12px;border:none;border-radius:8px;width:80%;max-width:300px;font-size:16px;margin-top:15px;}
-button{padding:12px 20px;border:none;border-radius:8px;margin-top:15px;background:#fff;color:#ff0080;font-size:16px;font-weight:bold;cursor:pointer;}
-.footer{margin-top:40px;font-size:14px;}
-a{color:white;text-decoration:underline;}
-.content{max-width:800px;margin:30px auto;font-size:16px;line-height:1.6;}
-.music-btn{position:fixed;bottom:20px;right:20px;background:white;color:#ff0080;padding:10px 15px;border-radius:50px;font-weight:bold;cursor:pointer;}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg,#ff4e50,#f9d423);
+    color: white;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background: #ffffff;
+    color: #ff4e50;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+}
+a { color: white; }
 </style>
 </head>
+
 <body>
+
 <div class="container">
-<h1>🌸 होली की हार्दिक शुभकामनाएं 🌸</h1>
-<div class="name" id="wishName"></div>
-<input type="text" id="nameInput" placeholder="अपना नाम यहाँ लिखें"><br>
-<button onclick="share()">व्हाट्सएप पर शेयर करें</button>
-<div class="content">
-<p>होली भारत का एक प्रमुख और अत्यंत हर्षोल्लास से मनाया जाने वाला त्योहार है। यह रंगों, प्रेम और एकता का प्रतीक है। इस दिन लोग अपने मित्रों और परिवार के साथ रंग खेलते हैं और मिठाइयाँ बांटते हैं।</p>
-<p>आप भी इस विशेष अवसर पर अपने प्रियजनों को अपनी ओर से शुभकामनाएं भेज सकते हैं। ऊपर अपना नाम लिखें और तुरंत संदेश साझा करें।</p>
+    <h1>🎨 होली की हार्दिक शुभकामनाएं 🎨</h1>
+
+    <p id="wishText">
+        Vipul की तरफ से होली की हार्दिक शुभकामनाएं
+    </p>
+
+    <input type="text" id="nameInput" placeholder="अपना नाम यहाँ लिखें">
+
+    <br>
+
+    <button onclick="generateLink()">शेयर करें</button>
+
+    <div class="footer">
+        <p>
+            <a href="privacy.html">गोपनीयता नीति</a> |
+            <a href="about.html">हमारे बारे में</a>
+        </p>
+    </div>
 </div>
-<div class="footer">
-<a href="privacy.html">गोपनीयता नीति</a> | 
-<a href="about.html">हमारे बारे में</a>
-</div>
-</div>
-<div class="music-btn" onclick="playMusic()">🎵 संगीत चलाएँ</div>
-<audio id="bgMusic" loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6df0f9b46f.mp3?filename=holi-party-112194.mp3" type="audio/mpeg">
-</audio>
+
 <script>
-function getParam(name){const urlParams=new URLSearchParams(window.location.search);return urlParams.get(name);}
-const user=getParam("name");
-if(user){document.getElementById("wishName").innerText=user+" की तरफ से";}
-else{document.getElementById("wishName").innerText="विपुल की तरफ से";}
-function share(){const name=document.getElementById("nameInput").value.trim();
-if(!name){alert("कृपया अपना नाम लिखें");return;}
-const link=window.location.origin+"?name="+encodeURIComponent(name);
-const msg="होली की हार्दिक शुभकामनाएं 🎉\n"+link;
-window.open("https://wa.me/?text="+encodeURIComponent(msg),"_blank");}
-function playMusic(){document.getElementById("bgMusic").play();}
+function generateLink() {
+    var name = document.getElementById("nameInput").value;
+    if(name.trim() === "") {
+        alert("कृपया अपना नाम लिखें");
+        return;
+    }
+
+    var text = name + " की तरफ से होली की हार्दिक शुभकामनाएं 🎉\n\nदेखें यहाँ: https://v1wish.github.io/";
+    var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(text);
+
+    window.open(whatsappUrl, '_blank');
+}
 </script>
+
 </body>
 </html>
